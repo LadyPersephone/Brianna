@@ -1,10 +1,14 @@
 import { Before, After, Status } from "cucumber";
+import { Actions } from "../support/actions";
 
 import { browser } from "protractor";
 
 // This will run before each scenario
 Before({timeout: 100 * 1000}, async function() {
 
+    this.actions = new Actions();
+
+    browser.waitForAngularEnabled(false);
     // Opens the website to the default URL in the 'protractor.config.ts' file
     await browser.get("");
 
@@ -20,4 +24,4 @@ After({timeout: 100 * 1000}, async function(scenario) {
         // attach the screenshot to the report
         this.attach(screenShot, "image/png");
     }
-};
+});

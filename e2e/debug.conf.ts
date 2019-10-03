@@ -24,7 +24,7 @@ export const config: Config = {
         format: "json:.tmp/results.json",
         profile: false,
         require: ["./step_definitions/*.steps.js", "./support/hooks.js"],
-        tags: "not @ignore",
+        tags: "@runThis",
         "no-source": true,
     },
 
