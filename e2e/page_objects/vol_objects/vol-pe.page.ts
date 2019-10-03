@@ -12,7 +12,9 @@ export class VolPartsEntryPage{
 
     public searchResultsRowSelector = "div.ui-grid-cell-contents.ng-binding.ng-scope";
 
-    public selectVehicle = $("p.form-control-static.ng-binding)";
+    public searchResultsVehicleTable = $("div#gridvehicleSearchGrid");
+
+    public selectVehicle = $("p.form-control-static.ng-binding");
 
     public selectVehicleButton = $("btn.btn-primary.ng-binding");
 
