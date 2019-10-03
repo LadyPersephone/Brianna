@@ -35,9 +35,27 @@ When('we select a customer called {string}', async function (customerName) {
 
   return this.actions.click(volPEPage.selectCustomerButton);
 
+
+  // volPartsEntryPage.selectVehicleInTable(vehicle).first().click();
+  this.actions.clickOnElementInTable(volPEPage.searchResultsTable, volPEPage.searchResultsRowSelector, selectVehicle);
+
+  this.actions.click(volPEPage.selectVehicleButton);
+
+  return this.actions.click(volPEPage.selectVehicleButton);
+
+  // volPartsEntryPage.selectContinueButton
+  this.actions.click(volPEPage.selectContinueButton);
+
+  return this.actions.click(volPEPage.selectContinueButton);
+
 });
 
 Then('we see what vehicles they own', function () {
   // Write code here that turns the phrase above into concrete actions
   return 'pending';
-});
+
+Then('we navigate to Customer Contact', function () {
+  //  Write code here that enables the user to navigate to the next screen
+  return 'pending';
+}
+);
